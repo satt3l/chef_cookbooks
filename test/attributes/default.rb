@@ -1,0 +1,11 @@
+default['test']['app_path'] = '/opt/myapp'
+default['test']['app_path_to_release'] = "#{node['test']['app_path']}/app1"
+default['test']['pip_reqs'] = "#{node['test']['app_path_to_release']}/requirements.txt"
+default['test']['python_version'] = '2.7'
+default['test']['pip_version'] = '2.7'
+default['test']['app_user'] = 'root'
+default['test']['app_user_group'] = 'root'
+default['test']['repository'] = 'https://github.com/Microsoft/project-python-django-webapp.git'
+default['test']['app_listen_ip'] = '0.0.0.0'
+default['test']['app_listen_port'] = '8080'
+default['test']['app_listen'] = "#{node['test']['app_listen_ip']}:#{node['test']['app_listen_port']}"
